@@ -59,6 +59,10 @@ class conditionalSatements{
                 break;
             default:
                 System.out.println("Invalid day");
+
+        // switch case is comparatively faster than if else if else statements
+        // because it directly jumps to the case without checking the condition
+        // so whenever you get the chance to use switch case, use it
         
         input.close();
         }
