@@ -1,5 +1,6 @@
 package BroJava;
 import java.util.Random;
+import java.util.Arrays;
 class BroJava {
     public static void main(String[] args) {
         //  java source code - .java file 
@@ -68,6 +69,32 @@ class BroJava {
         System.out.println("Random number between 69 and 96 is : "+randomNumber);
         System.out.println("Random double value is : "+randomDouble);
         System.out.println("Random boolean value is : "+randomBoolean);
+
+        // constants
+        final int constantName = 10; // final keyword is used to declare a constant
+
+        // constantName = 20; // this will throw an error
+
+        // 2d array
+        int matrix[][] = new int[3][3]; // declaration of a 3x3 matrix
+
+        matrix[0][0] = 1;
+        matrix[0][1] = 2;
+        matrix[0][2] = 3;
+        matrix[1][0] = 4;
+        matrix[1][1] = 5;
+        matrix[1][2] = 6;
+        matrix[2][0] = 7;
+        matrix[2][1] = 8;
+        matrix[2][2] = 9;
+
+        for (int[] elements: matrix){
+            for (int element: elements){
+                System.out.print(element+" ");
+            }
+            System.out.println();
+        }
+
         
 
     }

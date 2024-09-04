@@ -42,5 +42,19 @@ class strings{
         System.out.println("replacing hi from the formattedString variable with Hi \n"+formattedString.replace("hi", "Hi"));
         System.out.println("checking if the formattedString contains the word attendance \n"+formattedString.contains("attendance"));
 
+        // trim 
+        String withSpaces = "    Ashwath    ";
+        System.out.println("withSpaces : "+withSpaces);
+        System.out.println("withoutSpaces : "+withSpaces.trim());
+
+        // charAt
+        System.out.println("charAt 2 : "+name.charAt(2));
+
+        // indexOf
+        System.out.println("indexOf a : "+name.indexOf('a'));
+        
+
+
+
     }
 }
