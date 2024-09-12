@@ -23,6 +23,11 @@ class printFormat{
         int myInt = 50;
         double myDouble = 1000;
 
+        // final keyword = constant, value cannot be modified
+        final double PI = 3.14159;
+
+        // PI = 3.14;  error: cannot assign a value to final variable PI
+
         // [conversion-character]
         System.out.printf("%b\n", myBoolean); // %b = boolean
         System.out.printf("%c\n", myChar); // %c = char
@@ -31,8 +36,8 @@ class printFormat{
         System.out.printf("%f\n", myDouble); // %f = double
 
         // [width]
-        System.out.printf("Hello %10s\n", myString); // %10s = 10 characters wide
-        System.out.printf("Hello %-10s\n", myString); // %-10s = 10 characters wide, left-justified
+        System.out.printf("Hello %20s!\n", myString); // %10s = 10 characters wide
+        System.out.printf("Hello %-10s !\n", myString); // %-10s = 10 characters wide, left-justified
 
         // [precision]
         System.out.printf("You have this much money %.2f\n", myDouble); // %.2f = 2 decimal places
@@ -42,7 +47,7 @@ class printFormat{
         System.out.printf("You have this much money %,.2f\n", myDouble); // %,.2f = use , to group numbers, 2 decimal places
 
         // [argument-index$]
-        System.out.printf("%2$s %2$s %1$s %2$s %1 $s\n", "beers", "99"); // 1$ = first argument, 2$ = second argument
+        // System.out.printf("\n", "beers", "99"); // 1$ = first argument, 2$ = second argument
 
         // [flags] = adds an effect to output
         // - = left-justify
@@ -59,5 +64,7 @@ class printFormat{
         System.out.printf("%010d\n", 1000);
         System.out.printf("%,010d\n", 1000);
         System.out.printf("%,010d\n", 1000000000);
+
+
     }
 }
