@@ -1,4 +1,5 @@
 package BroJava;
+import java.util.Scanner;
 
 class inheritance{
     public static void main(String[] args) {
@@ -69,6 +70,33 @@ class inheritance{
         System.out.print(copySportsCar.getName());
         System.out.print(copySportsCar.getYear());
 
+        // polymorphism - ablitity of an object to identify as more than one type
+        vehicle[] myGarage = {myBike, mySportsCar, copyBike, copySportsCar};
+        System.out.println();
+        System.out.println("vehicles in my garage");
+        for(vehicle VehicleFromGarage: myGarage){
+            System.out.println(VehicleFromGarage.toString());
+            VehicleFromGarage.start();
+        }
+
+        // dynamic polymorphism - runtime polymorphism
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the vehicle to start \n 1. Bike \n 2. sportsCar");
+        int choice = scanner.nextInt();
+        if(choice == 1){
+            Bike dynamicBike = new Bike("Yamaha ", "R15 ", 2022, "M version ");
+            dynamicBike.start();
+            System.out.println(dynamicBike.toString());
+        }
+        else if (choice == 2){
+            sportsCar dynamicSportsCar = new sportsCar("Ferrari ", "F8 ", 2022, "Spider ");
+            dynamicSportsCar.start();
+            System.out.println(dynamicSportsCar.toString());
+        }
+        else{
+            System.out.println("Invalid choice");
+        }
+        scanner.close();
 
     }    
 }
