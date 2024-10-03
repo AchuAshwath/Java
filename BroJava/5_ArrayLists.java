@@ -2,7 +2,7 @@ package BroJava;
 import java.util.*;
 class JavaArrayLists {
     public static void main(String args[]){
-        // ArraLists
+        // ArrayLists
         // resizable array, elements can be added or removed after compilation phase
         // ArrayList<Type> variable = new ArrayList<Type>();
         int index = 1;

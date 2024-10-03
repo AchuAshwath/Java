@@ -1,12 +1,13 @@
 package LeetCode;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Stack;
-import java.util.HashMap;
 
 class checkBrackets{
     static boolean CheckBrackets(String inputString){
-        Stack<Character> BracketStack = new Stack<Character>();
-        HashMap<Character, Character> respectiveBrackets = new HashMap<Character, Character>(); 
+        Stack<Character> BracketStack = new Stack<>();
+        HashMap<Character, Character> respectiveBrackets = new HashMap<>(); 
         respectiveBrackets.put(')', '(');
         respectiveBrackets.put('}', '{');
         respectiveBrackets.put(']', '[');
@@ -36,7 +37,7 @@ class checkBrackets{
                     BracketStack.push(inputString.charAt(i));
                     System.out.println(BracketStack);
                 }
-
+                
             }
         }
         if(!BracketStack.isEmpty()){
@@ -44,9 +45,34 @@ class checkBrackets{
         }
         return true;
     }
+
+    public static boolean isValid(String s) {
+        int i = -1;
+         System.out.println("initialising the i value to be -1");
+           char[] stack = new char[s.length()];
+           for (char ch : s.toCharArray()) {
+               if (ch == '(' || ch == '{' || ch == '['){
+                   stack[++i] = ch;
+                      System.out.println("i value is "+i+"\npushing the value to the stack \n"+Arrays.toString(stack));
+               }
+               else{
+                   if (i >= 0
+                            && ((stack[i] == '(' && ch == ')')
+                           || (stack[i] == '{' && ch == '}')
+                           || (stack[i] == '[' && ch == ']'))){
+                               System.out.println("i value is "+i+"\npopping the value from the stack \n"+Arrays.toString(stack));
+                               i--;
+                           }
+                   else
+                       return false;
+               }
+           }
+           System.out.println("final i value is "+i);
+           return i == -1;
+    }
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String inputString = new String();
+        Scanner input = new Scanner(System.in); // try and catch warning
+        String inputString;
         System.out.println("Can you enter the string of Brackets to compare : ");
         inputString = input.next();
         // inputString = "(])";
@@ -57,6 +83,12 @@ class checkBrackets{
             System.out.println("the given brackets are not properly closed and not in order");
         }
         input.close();
+
+        // System.out.println(b.isValid("()"));
+        // System.out.println(b.isValid("()[]{}"));
+        // System.out.println(b.isValid("(]"));
+        // System.out.println(b.isValid("([)]"));
+        System.out.println(isValid("{[]}"));
 
     }
 }
