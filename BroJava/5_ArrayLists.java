@@ -1,12 +1,12 @@
 package BroJava;
-import java.util.*;
+import java.util.ArrayList;
 class JavaArrayLists {
     public static void main(String args[]){
         // ArrayLists
         // resizable array, elements can be added or removed after compilation phase
         // ArrayList<Type> variable = new ArrayList<Type>();
         int index = 1;
-        ArrayList<Integer> ALint = new ArrayList<Integer>();
+        ArrayList<Integer> ALint = new ArrayList<>();
         ALint.add(5);
 
         System.out.println(ALint.toString());

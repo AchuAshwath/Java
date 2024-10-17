@@ -2,7 +2,7 @@ package DSA;
 import java.util.Stack;
 class JavaStack {
     public static void main(String[] args){
-        Stack<String> myStack = new Stack<String>();
+        Stack<String> myStack = new Stack<>();
         System.out.println(myStack.empty());
 
         // pushing

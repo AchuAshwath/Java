@@ -9,4 +9,4 @@ x = backspace in command mode
 r = replace in command mode
 
 
-esc = command mode
+esc = command mode/ normal mode

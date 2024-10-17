@@ -2,7 +2,7 @@ package BroJava;
 
 class JavaMethods {
     public static void main(String[] args) {
-        // method is a set of instruction/ block of code - {}, that is executed when it it called.
+        // method is a set of instruction/ block of code - {}, that is executed when it is called.
         helloWorld();
         StringhelloWorld("Ashwath");
         System.out.println("calculating sum of 1 and 3 using the sum function : "+sum(1,3));

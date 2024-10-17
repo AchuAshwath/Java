@@ -17,7 +17,7 @@ class inheritance{
         // System.out.println(myBike.name);
         //The field Bike.name is not visibleJava(33554503)
         // System.out.println(mySportsCar.name);
-        //The field sportsCar.name is not visibleJava(33554503)
+        // The field sportsCar.name is not visibleJava(33554503)
         
         System.out.println(mySportsCar.toString());
         System.out.println(myBike.toString());

@@ -10,7 +10,7 @@ class JavaQueue{
         // use the Queue interface 
         // Queue extends collection class
 
-        Queue<String> myQueue = new LinkedList<String>();
+        Queue<String> myQueue = new LinkedList<>();
         //          Throws exception	Returns special value
         // Insert	add(e)	            offer(e)
         // Remove	remove()	        poll()

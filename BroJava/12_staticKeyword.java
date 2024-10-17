@@ -27,6 +27,7 @@ class staticKeyword{
         Friends friend2 = new Friends("Malini");
         Friends friend3 = new Friends("Anush");
 
+        System.out.println("usually we can access members of object of \nfriend1 : "+friend1.name);
 
         //System.out.println(Friends.name);
         // Cannot make a static reference to the non-static field Friends.nameJava(33554506)
