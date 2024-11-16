@@ -1,2 +1,5 @@
 *.mp4
 *.webm
+BroJava/*.class
+DSA/*.class
+basics/*class
